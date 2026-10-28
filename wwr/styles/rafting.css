@@ -27,27 +27,45 @@ footer {
 }
 
 header {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    align-items: center;
+    gap: 24px;
     padding: 16px;
     background-color: var(--accent2-color);
 }
 
 header img {
+    display: block;
     width: 140px;
     height: auto;
+    justify-self: center;
 }
 
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
+header nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 header nav a {
     display: block;
-    padding: 4px;
+    padding: 10px 12px;
     color: var(--primary-color);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+header nav a:hover,
+header nav a[aria-current="page"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
 }
 
 h1,
@@ -58,16 +76,13 @@ h2 {
 
 .hero {
     position: relative;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
+    margin-top: 16px;
 }
 
 .hero > img {
-    height: 500px;
+    display: block;
+    width: 100%;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -84,56 +99,137 @@ h2 {
 .hero article {
     position: absolute;
     bottom: 24px;
-    left: 0;
-    right: 0;
+    left: 24px;
+    right: 24px;
+    display: flow-root;
+    padding: 16px;
     background-color: var(--secondary-color);
 }
 
 .hero article img {
     float: right;
     width: 125px;
-    margin: 8px 8px 8px 16px;
+    height: auto;
+    margin: 0 0 8px 16px;
 }
 
 section {
+    margin: 16px 0;
+    padding: 20px;
     background-color: var(--accent2-color);
 }
 
 h2 {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.history-layout {
+    display: grid;
+    grid-template-columns: 1fr 180px 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.history-layout img {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.adventure-gallery img {
+    display: block;
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 0.85rem;
     text-align: center;
 }
 
 footer {
-    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
     background-color: var(--accent2-color);
+}
+
+footer p {
+    flex: 1;
     text-align: center;
+    font-size: 0.9rem;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .socialmedia a {
+    display: block;
     text-decoration: none;
-    margin: 8px;
 }
 
 .socialmedia img {
+    display: block;
     width: 32px;
     height: 32px;
 }
 
-@media (max-width: 600px) {
-    .hero > img {
-        height: 520px;
-        object-fit: cover;
+@media (max-width: 650px) {
+    header {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+    }
+
+    .history-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .history-layout img {
+        max-width: 360px;
+        height: 200px;
+        justify-self: center;
+    }
+
+    .adventure-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .hero h1 {
         font-size: 1.5rem;
     }
 
+    .hero > img {
+        height: 280px;
+    }
+
     .hero article {
-        bottom: 8px;
+        position: static;
     }
 
     .hero article img {
         width: 100px;
+    }
+
+    footer {
+        flex-direction: column;
     }
 }
