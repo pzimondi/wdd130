@@ -233,3 +233,166 @@ footer p {
         flex-direction: column;
     }
 }
+
+/* Contact Us page */
+.contact-details {
+    padding: 24px 20px;
+    text-align: center;
+}
+
+.contact-details h1 {
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+}
+
+.contact-details address {
+    margin-bottom: 12px;
+    font-style: normal;
+}
+
+.contact-details a {
+    color: var(--primary-color);
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    padding: 0 20px 20px;
+    align-items: stretch;
+}
+
+.contact-map {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    border: 1px solid #89999f;
+}
+
+.contact-form {
+    display: grid;
+    gap: 12px;
+}
+
+.contact-field {
+    display: grid;
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #72838a;
+    border-radius: 3px;
+    font: inherit;
+    color: var(--accent1-color);
+    background-color: white;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form fieldset {
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #89999f;
+}
+
+.contact-form legend {
+    padding: 0 6px;
+}
+
+.contact-choice {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 4px 0;
+}
+
+.contact-choice input {
+    flex-shrink: 0;
+    margin-top: 6px;
+    accent-color: var(--primary-color);
+}
+
+.contact-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--primary-color);
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent1-color);
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible,
+.contact-form button:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+.employee-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Show three different team members from our existing group photo. */
+.employee-photo {
+    position: relative;
+    width: 140px;
+    height: 160px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.employee-photo img {
+    position: absolute;
+    width: 1200px;
+    height: 800px;
+    max-width: none;
+}
+
+.employee-one img {
+    left: -160px;
+    top: -180px;
+}
+
+.employee-two img {
+    left: -550px;
+    top: -50px;
+}
+
+.employee-three img {
+    left: -910px;
+    top: -140px;
+}
+
+@media (max-width: 650px) {
+    .contact-layout,
+    .employee-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-map {
+        height: 300px;
+        min-height: 0;
+    }
+
+    .employee-gallery {
+        gap: 28px;
+    }
+}

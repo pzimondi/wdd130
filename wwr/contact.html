@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Zambezi Rafting</title>
+    <meta name="description" content="Contact Zambezi Rafting to ask about trips, reservations, or your next river adventure in Victoria Falls.">
+    <meta name="author" content="Pastor Munashe Zimondi">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/rafting-logo.jpg" alt="Whitewater rafting emblem for Zambezi Rafting" width="140">
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html" aria-current="page">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <div class="contact-details">
+            <h1>Contact Us — Zambezi Rafting</h1>
+            <address>
+                Livingstone Way, Victoria Falls, Zimbabwe<br>
+                <a href="tel:+263771448536">+263771448536</a><br>
+                <a href="mailto:hello@zambezirafting.com">hello@zambezirafting.com</a>
+            </address>
+            <p>Planning your first rafting trip? We are happy to help you get ready.</p>
+        </div>
+
+        <div class="contact-layout">
+            <iframe class="contact-map"
+                src="https://maps.google.com/maps?q=Victoria%20Falls%2C%20Zimbabwe&amp;z=13&amp;output=embed"
+                title="Map of Victoria Falls, Zimbabwe" width="400" height="480"
+                loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <form class="contact-form" method="get">
+                <div class="contact-field">
+                    <label for="fullname">Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Your full name" autocomplete="name" required>
+                </div>
+                <div class="contact-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address" autocomplete="email" required>
+                </div>
+                <fieldset>
+                    <legend>Message Purpose</legend>
+                    <label class="contact-choice" for="general">
+                        <input type="radio" id="general" name="purpose" value="general-inquiry" required>
+                        General Inquiry
+                    </label>
+                    <label class="contact-choice" for="reservation">
+                        <input type="radio" id="reservation" name="purpose" value="reservation-question">
+                        Reservation Question
+                    </label>
+                    <label class="contact-choice" for="suggestion">
+                        <input type="radio" id="suggestion" name="purpose" value="website-suggestion">
+                        Website Suggestion
+                    </label>
+                </fieldset>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="What would you like to know?" required></textarea>
+                <label class="contact-choice" for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                    Please subscribe me to the monthly newsletter
+                </label>
+                <button type="submit">Get in Touch!</button>
+            </form>
+        </div>
+
+        <section class="contact-team">
+            <h2>We Are Here to Serve You</h2>
+            <div class="employee-gallery">
+                <figure>
+                    <div class="employee-photo employee-one">
+                        <img src="images/happy-rafters.jpg" alt="Team member wearing a white helmet and a life jacket" width="600" height="400" loading="lazy">
+                    </div>
+                    <figcaption><strong>River Guide</strong><br>Helping you enjoy the rapids safely.</figcaption>
+                </figure>
+                <figure>
+                    <div class="employee-photo employee-two">
+                        <img src="images/happy-rafters.jpg" alt="Team member wearing a white helmet at the back of the group" width="600" height="400" loading="lazy">
+                    </div>
+                    <figcaption><strong>Trip Coordinator</strong><br>Helping you plan your day on the river.</figcaption>
+                </figure>
+                <figure>
+                    <div class="employee-photo employee-three">
+                        <img src="images/happy-rafters.jpg" alt="Team member wearing a black helmet and yellow life jacket" width="600" height="400" loading="lazy">
+                    </div>
+                    <figcaption><strong>Reservations Assistant</strong><br>Helping with bookings and questions.</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Zambezi Rafting | Pastor Munashe Zimondi</p>
+        <nav class="socialmedia" aria-label="Social media">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Facebook icon" width="32" height="32">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.svg" alt="LinkedIn icon" width="32" height="32">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Instagram icon" width="32" height="32">
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>
