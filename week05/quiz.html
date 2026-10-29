@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A short quiz to practice the basics of HTML and CSS.">
+    <meta name="author" content="Pastor Munashe Zimondi">
+    <title>Basic HTML and CSS Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+
+<body>
+    <header>
+        <h1>Basic HTML and CSS Quiz</h1>
+    </header>
+    <main>
+        <form method="get">
+            <label for="q1"><strong>1.</strong> What does CSS stand for?</label>
+            <input type="text" id="q1" name="q1" required>
+
+            <label for="q2"><strong>2.</strong> How does CSS help improve the appearance of a web page?</label>
+            <textarea id="q2" name="q2" rows="4" required></textarea>
+
+            <label for="q3"><strong>3.</strong> Which HTML element links an external CSS file?</label>
+            <select id="q3" name="q3" required>
+                <option value="" selected disabled>Choose one ...</option>
+                <option value="link">&lt;link&gt;</option>
+                <option value="style">&lt;style&gt;</option>
+                <option value="script">&lt;script&gt;</option>
+            </select>
+
+            <label for="q4"><strong>4.</strong> How many pixels of bottom padding does this rule add?</label>
+            <pre><code>padding: 10px 20px 15px;</code></pre>
+            <input type="number" id="q4" name="q4" min="0" step="1" required>
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2026 | Pastor Munashe Zimondi | WDD 130</p>
+    </footer>
+</body>
+
+</html>
